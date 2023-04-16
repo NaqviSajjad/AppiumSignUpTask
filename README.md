@@ -1,7 +1,7 @@
 # AppiumSignUpTask
 StudyDrive Sign Up 
 
-Prerequisites:
+## Prerequisites:
 -Java should be installed.
 -Install JDK and set a path of JDK and bin folder
 - Download and install Java (JDK) and set a path of JDK and bin folder.
@@ -18,7 +18,7 @@ Prerequisites:
 - For Android install UiAutomator2 Driver to capture screenshots.
 - For iOS set up XCUITest Driver.
 
-WorkFlow:
+## WorkFlow:
 
 - Use Page object model design pattern to automate mobile sign up.
 - Two files one is for page objects in which we store all selectors/page objects.
