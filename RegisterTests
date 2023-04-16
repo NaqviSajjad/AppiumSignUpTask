@@ -1,0 +1,46 @@
+import org.testng.annotations.Test;
+import pageObjects.DeleteUserPageObjects;
+import pageObjects.LoginPageObjects;
+import pageObjects.RegisterPageObjects;
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+
+import java.security.Timestamp;
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
+
+
+public class RegisterTests extends base {
+@Test
+    public void register_email() throws Exception {
+
+
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(dtf.format(now));
+        RegisterPageObjects reg = new RegisterPageObjects(driver);
+        LoginPageObjects log = new LoginPageObjects(driver);
+        DeleteUserTests delete = new DeleteUserTests();
+        DeleteUserPageObjects del = new DeleteUserPageObjects(driver);
+
+        reg.ageSwitch.click();
+        reg.startApp.click();
+        reg.selectState.click();
+        reg.weiterOnborading.click();
+        reg.communityBtn.click();
+        log.bot.click();
+        del.smallProfile.click();
+        reg.bigProfile.click();
+        reg.termsAccept.click();
+        reg.registerMitEmail.click();
+        reg.emailField.sendKeys("auto+"+dtf.format(now)+"@gmail.com");
+        reg.passwordField.sendKeys("Test12345678");
+        reg.repeatPasswordField.sendKeys("Test12345678");
+        reg.registerWeiter.click();
+        reg.enterUsername.sendKeys("AutomationUser");
+        Thread.sleep(1000);
+        reg.registerConfirm.click();
+	  Assert.assertEquals(reg.dashboardText.getText(),"Dashboard");
+}
+
+}
