@@ -2,6 +2,7 @@
 StudyDrive Sign Up 
 
 ## Prerequisites:
+
 -Java should be installed.
 -Install JDK and set a path of JDK and bin folder
 - Download and install Java (JDK) and set a path of JDK and bin folder.
@@ -11,10 +12,11 @@ StudyDrive Sign Up
 ## Installation
 
 - Download appium from official site. (Run downloaded exe file)
-- Install via npm: npm install -g appium.
+- Install via npm: `npm install -g appium`
 - Install appium doctor dependencey
-- npm install -g appium-doctor.
-- Run the appium-doctor command, to verify the installation. 
+- `npm install -g appium-doctor`.
+- Run the command, to verify the installation.
+    `appium-doctor`
 - For Android install UiAutomator2 Driver to capture screenshots.
 - For iOS set up XCUITest Driver.
 
