@@ -1,5 +1,5 @@
 # AppiumSignUpTask
-StudyDrive Sign Up 
+General Sign Up process automation using Appium Framework. 
 
 ## Prerequisites:
 
